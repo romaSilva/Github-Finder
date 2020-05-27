@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { Link } from 'react-router-dom'
 
 function UserItem({user}) {
 
@@ -15,11 +16,10 @@ function UserItem({user}) {
             <h3>{user.login}</h3>
 
             <div>
-                <a 
+                <Link 
                     className="btn btn-dark btn-sm my-1" 
-                    target="_blank"
-                    href={user.html_url}>More
-                </a>
+                    to={`/user/${user.login}`}>More
+                </Link>
             </div>
         </div>
     )
