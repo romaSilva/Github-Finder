@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-function Search({searchUsers, clearUsers, showClear, setAlert}) {
+function Search({searchUsers, clearUsers, showClear, createAlert}) {
 
     const [text, setText] = useState('')
 
@@ -9,7 +9,7 @@ function Search({searchUsers, clearUsers, showClear, setAlert}) {
     const handleSubmit = e => {
         e.preventDefault()
         if(text === '') {
-            setAlert('Please enter something', 'light')
+            createAlert('Please enter something', 'light')
         } else {
             searchUsers(text)
             setText('')

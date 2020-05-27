@@ -7,6 +7,7 @@ function User({getUser, getUserRepos, match, user, loading, repos}) {
 
     useEffect(() => {
         getUser(match.params.login)
+        getUserRepos(match.params.login)
     }, [])
 
 
